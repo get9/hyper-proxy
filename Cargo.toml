@@ -1,6 +1,6 @@
 [package]
 name = "hyper-proxy"
-version = "0.10.1"
+version = "0.10.2"
 authors = ["Johann Tuffe <tafia973@gmail.com>"]
 description = "A proxy connector for Hyper-based applications"
 
@@ -15,7 +15,8 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "1", features = ["io-std", "io-util"] }
-hyper = { version = "0.14", features = ["client"] }
+hyper = { version = "1.1", features = ["client"] }
+hyper-util = { version = "0.1", default-features = false, features = ["client-legacy", "tokio"] }
 
 tower-service = "0.3"
 http = "0.2"
