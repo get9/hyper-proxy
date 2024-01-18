@@ -16,7 +16,7 @@ edition = "2018"
 [dependencies]
 tokio = { version = "1", features = ["io-std", "io-util"] }
 hyper = { version = "1.1", features = ["client"] }
-hyper-util = { version = "0.1", default-features = false, features = ["client-legacy", "tokio"] }
+hyper-util = { version = "0.1.2", default-features = false, features = ["client-legacy", "tokio"] }
 
 tower-service = "0.3"
 http = "1"
