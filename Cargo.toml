@@ -1,6 +1,6 @@
 [package]
 name = "hyper-proxy"
-version = "0.10.1"
+version = "0.10.2"
 authors = ["Johann Tuffe <tafia973@gmail.com>"]
 description = "A proxy connector for Hyper-based applications"
 
@@ -15,10 +15,11 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "1", features = ["io-std", "io-util"] }
-hyper = { version = "0.14", features = ["client"] }
+hyper = { version = "1.1", features = ["client"] }
+hyper-util = { version = "0.1.2", default-features = false, features = ["client-legacy", "tokio"] }
 
 tower-service = "0.3"
-http = "0.2"
+http = "1"
 futures-util = { version = "0.3", default-features = false }
 bytes = "1.0"
 hyper-tls = { version = "0.5.0", optional = true }
@@ -32,7 +33,7 @@ hyper-rustls = { version = "0.24", optional = true }
 webpki = { version = "0.21", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 webpki-roots = { version = "0.21.0", optional = true }
-headers = "0.3"
+headers = "0.4"
 
 [dev-dependencies]
 tokio = { version = "1.0", features = ["full"] }
